@@ -7,7 +7,6 @@ import (
 
 func main() {
 
-	// Servir les fichiers statiques (html, images, vidéos, css, js)
 	fs := http.FileServer(http.Dir("./"))
 	http.Handle("/", fs)
 
