@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4655;
+}
+
+.hero {
+    height: 70vh;
+    background-image: url('imperium skin.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.media {
+    position: relative;
+    height: 180px;
+}
+
+.media img,
+.media video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media video {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media:hover video {
+    opacity: 1;
+}
+
+.media:hover img {
+    opacity: 0;
+}
+
+.card h3 {
+    margin: 12px 0 5px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: #555;
+}
